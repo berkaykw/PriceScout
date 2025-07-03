@@ -1,7 +1,6 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/43afc90c-03e1-485b-903c-9ac347ed396b" width="300" />
+  <img src="https://github.com/user-attachments/assets/3bee4e6c-f8ab-4eb9-883f-793c842c156e" width="300" />
 </div>
-
 
 # PriceScout
 
