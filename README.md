@@ -1,6 +1,6 @@
 # PriceScout
 
-**PriceScout**, Türkiye'nin popüler e-ticaret sitelerinden (şu anda Trendyol, Hepsiburada, Amazon) ürün verilerini toplayarak kullanıcıya fiyat, yorum, puan gibi bilgileri sunan bir ürün karşılaştırma aracıdır.
+**PriceScout**, Türkiye'nin popüler e-ticaret sitelerinden (**şu anda Trendyol, Hepsiburada, Amazon**) ürün verilerini toplayarak kullanıcıya fiyat, yorum, puan gibi bilgileri sunan bir ürün karşılaştırma aracıdır.
 
 ---
 
@@ -17,4 +17,5 @@ Kullanıcıların farklı sitelerdeki ürünleri tek bir yerden görmesini sağl
 -  Ürünü detaylı incelemek ya da satın almak için sayfa yönlendirme
 -  Çoklu ürün karşılaştırma altyapısı
 -  Liste temizleme, filtreleme ve sıralama seçenekleri
--  Streamlit tabanlı kullanıcı arayüzü
+- 🖥 Streamlit tabanlı kullanıcı arayüzü
+
