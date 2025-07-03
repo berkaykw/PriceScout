@@ -1,4 +1,7 @@
-![logo](https://github.com/user-attachments/assets/a69771af-a309-490c-98ed-6df308026675)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/43afc90c-03e1-485b-903c-9ac347ed396b" width="300" />
+</div>
+
 
 # PriceScout
 
