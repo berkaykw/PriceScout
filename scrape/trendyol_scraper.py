@@ -46,7 +46,7 @@ def get_trendyol_products(search_word, selected_sort):
 
     sleep(5)
     
-    products = []
+    products_trendyol = []
 
     
     for i in range(2,10):
@@ -107,7 +107,7 @@ def get_trendyol_products(search_word, selected_sort):
         elif product_price_original:
                 price_to_use = product_price_original
 
-        products.append((
+        products_trendyol.append((
             product_name, 
             price_to_use, 
             product_rating, 
@@ -118,6 +118,6 @@ def get_trendyol_products(search_word, selected_sort):
 
     
     driver.quit()
-    return products
+    return products_trendyol
 
 
