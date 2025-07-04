@@ -8,10 +8,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
+import time
 
 chromedriver_autoinstaller.install()
 
-def get_trendyol_products(search_word):
+def get_trendyol_products(search_word, selected_sort):
     driver = webdriver.Chrome()
     driver.set_window_size(1280, 900)
     driver.get("https://www.trendyol.com/")
@@ -28,24 +29,27 @@ def get_trendyol_products(search_word):
     search_box = driver.find_element(By.CSS_SELECTOR, "input[data-testid='suggestion']")
     search_box.send_keys(search_word)
     search_box.send_keys(Keys.ENTER)
+
     
     sleep(3)
 
-# en çok satan seçeneği
-    driver.find_element(By.CLASS_NAME,"select-w").click() 
-    best_seller = driver.find_elements(By.CLASS_NAME,"search-dropdown-text") 
+
+    def apply_sort(driver, sort_text):
+        driver.find_element(By.CLASS_NAME, "select-w").click()
+        options = driver.find_elements(By.CLASS_NAME, "search-dropdown-text")
+        for option in options:
+            if sort_text in option.text:
+                option.click()
+                break
     
-    for cursor in best_seller:
-        if "En çok satan" in cursor.text:
-            cursor.click()
-            break
+    apply_sort(driver, selected_sort)
 
     sleep(5)
     
     products = []
 
     
-    for i in range(1,10):
+    for i in range(2,10):
 
         #ürün adı
         name_xpath = f'//*[@id="search-app"]/div/div/div/div[2]/div[4]/div[1]/div/div[{i}]/a/div[2]/div[1]/div[1]/div/h3'
@@ -54,7 +58,6 @@ def get_trendyol_products(search_word):
         except NoSuchElementException:
             print(f"{i}. ürün adı alınamadı.")
             product_name = "Ürün adı yok"
-
 
         #ürün puanı
         rating_xpath = f'//*[@id="search-app"]/div/div/div/div[2]/div[4]/div[1]/div/div[{i}]/a/div[2]/div[1]/div[3]/div/div/span[1]'
@@ -98,6 +101,7 @@ def get_trendyol_products(search_word):
         except:
                 product_price_original = None
 
+        price_to_use = "Fiyat Yok"
         if product_price_discounted:
                 price_to_use = product_price_discounted
         elif product_price_original:
@@ -115,3 +119,5 @@ def get_trendyol_products(search_word):
     
     driver.quit()
     return products
+
+
