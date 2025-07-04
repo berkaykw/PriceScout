@@ -4,7 +4,7 @@ from scrape.amazon_scraper import get_amazon_products
 from PIL import Image
 import streamlit as st
 
-image_path = r"your-image-path"
+image_path = r"C:\Users\Ömer KARATAŞ\calisma\assets\images\logo.png"
 image = Image.open(image_path)
 col1, col2, col3 = st.columns([1, 2, 1])
 
