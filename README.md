@@ -14,7 +14,7 @@ To enable users to view products from different sites in one place and easily co
 
 ---
 
-## Features
+##  Features
 
 - Search products from Trendyol, Hepsiburada, and Amazon  
 - Display average rating, number of reviews, discounted/original price  
