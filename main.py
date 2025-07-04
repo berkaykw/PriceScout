@@ -1,6 +1,15 @@
 import streamlit as st
 from scrape.trendyol_scraper import get_trendyol_products
 from scrape.amazon_scraper import get_amazon_products
+from PIL import Image
+import streamlit as st
+
+image_path = r"your-image-path"
+image = Image.open(image_path)
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col2:
+    st.image(image, width=300)
 
 st.set_page_config(page_title="Price Scout", layout="centered")
 st.markdown("<h1 style='text-align:center; color:#0523f9;'>🛒 Price Scout - Ürünleri Hızlıca Karşılaştır ve Kararını Ver.</h1>", unsafe_allow_html=True)
@@ -166,3 +175,5 @@ with cols[1]:
     if st.session_state.amazon_products:
         for product in st.session_state.amazon_products[:max_show]:
             st.markdown(render_product_card(product, "Amazon"), unsafe_allow_html=True)
+
+
