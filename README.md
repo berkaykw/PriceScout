@@ -2,7 +2,6 @@
   <img src="https://github.com/user-attachments/assets/3bee4e6c-f8ab-4eb9-883f-793c842c156e" width="300" />
 </div>
 
-
 # PriceScout
 
 **PriceScout** is a product comparison tool that collects product data from popular Turkish e-commerce sites (currently Trendyol, Hepsiburada, Amazon) and provides users with information such as price, reviews, and ratings.
